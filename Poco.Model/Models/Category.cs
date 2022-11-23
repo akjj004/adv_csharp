@@ -10,7 +10,7 @@ namespace Poco.Model.Models
         public int Id { get; set; }
         public String? Name { get; set; }
         // many to many
-        public ICollection<PokemonCategory>? PokemonCategories { get; set; }
-        
+        public virtual ICollection<PokemonCategory>? PokemonCategories { get; set; }
+
     }
 }

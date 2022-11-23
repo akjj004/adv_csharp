@@ -12,6 +12,6 @@ namespace Poco.Model.Models
         public String? Name { get; set; }
 
         // one to many
-        public ICollection<Owner>? Owners { get; set; }
+        public virtual ICollection<Owner>? Owners { get; set; }
     }
 }

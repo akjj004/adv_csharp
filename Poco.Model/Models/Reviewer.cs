@@ -12,6 +12,6 @@ namespace Poco.Model.Models
         public String? LastName { get; set; }
 
         // one to many
-        public ICollection<Review>? Reviews { get; set; }
+        public virtual ICollection<Review>? Reviews { get; set; }
     }
 }

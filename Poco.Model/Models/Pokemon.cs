@@ -13,11 +13,11 @@ namespace Poco.Model.Models
         public DateTime BirthDate { get; set; }
 
         // one to many
-        public ICollection<Review>? Reviews { get; set; }
+        public virtual ICollection<Review>? Reviews { get; set; }
         // many to many
-        public ICollection<PokemonOwner>? PokemonOwners { get; set; }
+        public virtual ICollection<PokemonOwner>? PokemonOwners { get; set; }
         // many to many
-        public ICollection<PokemonCategory>? PokemonCategories { get; set; }
+        public virtual ICollection<PokemonCategory>? PokemonCategories { get; set; }
        
     }
 }

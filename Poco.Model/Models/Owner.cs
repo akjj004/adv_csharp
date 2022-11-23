@@ -12,8 +12,8 @@ namespace Poco.Model.Models
         public String? Gym { get; set; }
 
         // One relationship
-        public Country? Country { get; set; }
+        public virtual Country? Country { get; set; }
         // many to many
-        public ICollection<PokemonOwner>? PokemonOwners { get; set; }
+        public virtual ICollection<PokemonOwner>? PokemonOwners { get; set; }
     }
 }

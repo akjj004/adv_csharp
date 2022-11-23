@@ -9,7 +9,9 @@ namespace Poco.Model.Models
     {
         public int PokemonId { get; set; }
         public int CategoryId { get; set; }
-        public Pokemon? Pokemon { get; set; }
-        public Category? Category { get; set; }
+        // add virtual to have lazyLoading
+        public virtual Pokemon? Pokemon { get; set; }
+        // add virtual to have lazyLoading
+        public virtual Category? Category { get; set; }
     }
 }

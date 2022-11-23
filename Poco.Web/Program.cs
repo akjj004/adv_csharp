@@ -1,8 +1,15 @@
+using Poco.Dal.EF.Data;
+using Microsoft.EntityFrameworkCore;
+using Poco.Model.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<DataContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("default")) //here you can define a database type. 
+);
 
 var app = builder.Build();
 
@@ -22,6 +29,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller}/{action=Index}/{id?}");
 
-app.MapFallbackToFile("index.html");;
+app.MapFallbackToFile("index.html"); ;
 
 app.Run();

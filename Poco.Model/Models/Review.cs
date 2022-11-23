@@ -12,9 +12,9 @@ namespace Poco.Model.Models
         public String? Text { get; set; }
 
         // one relationship
-        public Reviewer? Reviewer { get; set; }
+        public virtual Reviewer? Reviewer { get; set; }
 
         // one relationship
-        public Pokemon? Pokemon { get; set; }
+        public virtual Pokemon? Pokemon { get; set; }
     }
 }
