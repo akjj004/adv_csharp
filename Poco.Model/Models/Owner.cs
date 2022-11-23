@@ -13,5 +13,7 @@ namespace Poco.Model.Models
 
         // One relationship
         public Country? Country { get; set; }
+        // many to many
+        public ICollection<PokemonOwner>? PokemonOwners { get; set; }
     }
 }

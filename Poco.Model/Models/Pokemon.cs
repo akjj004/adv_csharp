@@ -14,7 +14,10 @@ namespace Poco.Model.Models
 
         // one to many
         public ICollection<Review>? Reviews { get; set; }
-        // one to many
+        // many to many
+        public ICollection<PokemonOwner>? PokemonOwners { get; set; }
+        // many to many
+        public ICollection<PokemonCategory>? PokemonCategories { get; set; }
        
     }
 }
